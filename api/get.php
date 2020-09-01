@@ -21,7 +21,14 @@ if($method === 'get') {
                 $array['error'] = 'Id nao Encontrado';
             }
         } else {
-            $array['error'] = 'Id nao Enviado: '.$id;
+            // incluido temporariamente para exibir todos os headers 
+            $headers = '';
+            foreach (getallheaders() as $name => $value) { 
+                $headers .= "$name: $value,";
+            }     
+            // fim
+
+            $array['error'] = 'Id nao Enviado. Headers Recbidos: '.$headers;
         }
 } else {
     $array['error'] = 'Método não permitido (apenas GET)';
