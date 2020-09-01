@@ -1,0 +1,18 @@
+DEVSNOTES - sistema de anotações simples
+
+Estrutura de Dados:
+- local para armazenar as anotações
+-- id
+-- title
+-- body
+
+Quais os endpoints ?
+- (GET) /api/notes -  /api/getall.php
+- (GET) /api/note/123 - /api/get.php?id=123
+- (POST) /api/note (title, body) - / api/insert.php (title, body)
+- (PUT) /api/note/123 (title, body) -  /api/update.php (id, title, body)
+- (DELETE) /api/note/123 - /api/delete.php (id)
+
+
+* os links ao lados foram criados de modo a terms programas separados
+para usar com um PHP estrutural (mais básico).
