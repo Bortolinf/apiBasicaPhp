@@ -23,17 +23,8 @@ if($method === 'post') {
         ];
 
     } else {
-        $headers = '';
-        foreach ($_SERVER as $key => $value) {
-            if (strpos($key, 'HTTP_') === 0) {
-                $headers .= '   ';
-                $headers .= str_replace(' ', '', str_replace('_', ' ', strtolower(substr($key, 5))));
-                $headers .= ':';
-                $headers .= $value;
-            }
-        }
 
-        $array['error'] = 'Dados nao enviados: '.$headers;
+        $array['error'] = 'Dados nao enviados: ';
 
     }
 
